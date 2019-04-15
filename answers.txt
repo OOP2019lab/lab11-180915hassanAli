@@ -1,0 +1,16 @@
+Q6 first_name and last_name are accessed through getters/setters outside the class. This facilitates data encapsulation and allows abstraction. Because all the data to the two attributes goes through getters/setters, class Person is responsible for validation and verification.
+
+On the other hand age is an integer and is not complex enough to hide from derived classes.
+
+
+Why printStudent() did not work?
+first_name and last_name are private in base class thus they are hidden in derived classes. So they could not be accessed by the student class. This is fixed by calling the getters of the hidden members.
+
+Q8 There will be no change. In public inheritance, the private members were hidden and age was protected in child classes. There were no public members.
+
+This was identical to protected inheritance which also hid the private members and made the protected members protected.
+
+
+Q9 The protected members of the base class were made private in the child classes. The private members of base were hidden.
+The code continued to work because 1) there were no child classes of the child class.
+2) Public/protected members of base class were not accessed outside of the child class.
